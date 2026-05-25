@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMurph — Gospel Hip-Hop Artist | Juneteenth: Crabs, Chains, and Orange Kings</title>
+  <meta name="description" content="EMurph — Gospel hip-hop artist from Macon, GA. New album 'Juneteenth: Crabs, Chains, and Orange Kings' dropping June 19, 2026. Stream everywhere. Shop official merch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #050505;
+      --dark: #0e0e0e;
+      --card: #141414;
+      --border: #1e1e1e;
+      --gold: #c9941c;
+      --gold-light: #f0b432;
+      --orange: #e05c1a;
+      --white: #f5f5f5;
+      --muted: #888;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: linear-gradient(to bottom, rgba(5,5,5,0.95) 0%, transparent 100%);
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      background: linear-gradient(135deg, var(--gold-light), var(--orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold-light); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,148,28,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 70% 80%, rgba(224,92,26,0.08) 0%, transparent 60%),
+        var(--black);
+      z-index: 0;
+    }
+
+    .hero-badge {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      color: #000;
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+    }
+
+    .hero-name {
+      position: relative;
+      z-index: 1;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 18vw, 14rem);
+      letter-spacing: 8px;
+      line-height: 0.9;
+      background: linear-gradient(135deg, #fff 30%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .hero-album {
+      position: relative;
+      z-index: 1;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.2rem, 3.5vw, 2.4rem);
+      letter-spacing: 4px;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+
+    .hero-date {
+      position: relative;
+      z-index: 1;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+
+    .hero-ctas {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      color: #000;
+      font-weight: 900;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1px solid rgba(201,148,28,0.4);
+      color: var(--gold-light);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: var(--gold-light); color: #fff; }
+
+    .hero-scroll {
+      position: relative;
+      z-index: 1;
+      margin-top: 60px;
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 100px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      letter-spacing: 4px;
+      line-height: 1;
+      margin-bottom: 40px;
+    }
+
+    /* ── ALBUM ── */
+    #album .album-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .album-art-placeholder {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #1a1a0e 0%, #1e1000 40%, #2a1500 70%, #1a0a00 100%);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .album-art-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 40% 40%, rgba(201,148,28,0.15), transparent 60%);
+    }
+
+    .album-art-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 4px;
+      color: var(--gold-light);
+      text-align: center;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.1;
+    }
+
+    .album-art-sub {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: var(--orange);
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .album-meta h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 4px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .album-meta p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+
+    .release-date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(201,148,28,0.08);
+      border: 1px solid rgba(201,148,28,0.2);
+      padding: 10px 20px;
+      border-radius: 2px;
+      margin-bottom: 32px;
+    }
+
+    .release-date-badge span:first-child {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .release-date-badge span:last-child {
+      font-weight: 900;
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    /* ── STREAMING ── */
+    #streaming {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .streaming-inner {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .streaming-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .stream-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .stream-btn:hover {
+      border-color: var(--gold);
+      background: rgba(201,148,28,0.06);
+    }
+
+    .stream-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .si-spotify { background: #1DB954; }
+    .si-apple { background: linear-gradient(135deg, #fa57c1, #bf5af2); }
+    .si-youtube { background: #FF0000; }
+    .si-distrokid { background: var(--gold); color: #000; }
+
+    /* ── MERCH ── */
+    #merch { background: var(--dark); max-width: 100%; padding: 100px 24px; }
+
+    .merch-inner { max-width: 1100px; margin: 0 auto; }
+
+    .merch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .merch-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--white);
+      transition: border-color 0.2s, transform 0.2s;
+      display: block;
+    }
+
+    .merch-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .merch-img {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #151510, #1f1500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .merch-info { padding: 16px; }
+
+    .merch-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .merch-price {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--gold-light);
+    }
+
+    .merch-cta {
+      display: block;
+      text-align: center;
+      margin: 48px auto 0;
+      max-width: 280px;
+    }
+
+    /* ── ABOUT ── */
+    #about .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-portrait {
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #0e0e0e 0%, #1a1208 100%);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 8rem;
+      color: rgba(201,148,28,0.15);
+      letter-spacing: 4px;
+    }
+
+    .about-text p {
+      color: #aaa;
+      line-height: 1.9;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .about-text strong { color: var(--gold-light); }
+
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat { }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 6px;
+      background: linear-gradient(135deg, var(--gold-light), var(--orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .footer-copy {
+      color: #444;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+
+      #album .album-grid { grid-template-columns: 1fr; gap: 32px; }
+      .merch-grid { grid-template-columns: repeat(2, 1fr); }
+      #about .about-grid { grid-template-columns: 1fr; }
+      .about-portrait { aspect-ratio: 1; max-width: 200px; }
+      section { padding: 60px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .merch-grid { grid-template-columns: 1fr 1fr; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">EMurph</a>
+    <ul class="nav-links">
+      <li><a href="#album">Album</a></li>
+      <li><a href="#streaming">Stream</a></li>
+      <li><a href="#merch">Merch</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-badge">New Album Dropping June 19, 2026</div>
+    <h1 class="hero-name">EMurph</h1>
+    <div class="hero-album">Juneteenth: Crabs, Chains &amp; Orange Kings</div>
+    <div class="hero-date">June 19, 2026 &nbsp;·&nbsp; Gospel Hip-Hop &nbsp;·&nbsp; Available Everywhere</div>
+    <div class="hero-ctas">
+      <a href="https://direct.distrokid.com/emurph/" target="_blank" class="btn-primary">Shop Merch</a>
+      <a href="#streaming" class="btn-secondary">Stream Now</a>
+    </div>
+    <div class="hero-scroll">↓ &nbsp; Scroll to Explore</div>
+  </section>
+
+  <!-- ALBUM -->
+  <section id="album">
+    <div class="album-grid">
+      <div class="album-art-placeholder">
+        <div class="album-art-title">Juneteenth<br/>Crabs, Chains<br/>&amp; Orange Kings</div>
+        <div class="album-art-sub">EMurph · 2026</div>
+      </div>
+      <div class="album-meta">
+        <div class="section-label">New Album</div>
+        <h2>Juneteenth:<br/>Crabs, Chains<br/>&amp; Orange Kings</h2>
+        <div class="release-date-badge">
+          <span>Release Date</span>
+          <span>June 19, 2026</span>
+        </div>
+        <p>12 tracks. Unfiltered truth. Gospel fire meets hip-hop grit — a Juneteenth offering rooted in freedom, identity, and faith. From the chains we've broken to the kings we're becoming.</p>
+        <p>Distributed worldwide on all major streaming platforms via DistroKid.</p>
+        <a href="#streaming" class="btn-primary">Listen Everywhere</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STREAMING -->
+  <section id="streaming">
+    <div class="streaming-inner">
+      <div class="section-label">Available On</div>
+      <h2 class="section-title">Stream the Album</h2>
+      <p style="color: var(--muted); font-size: 0.95rem;">Available everywhere music lives. Pick your platform below.</p>
+      <div class="streaming-links">
+        <a href="https://open.spotify.com/artist/emurph" target="_blank" class="stream-btn">
+          <span class="stream-icon si-spotify">♪</span>Spotify
+        </a>
+        <a href="https://music.apple.com/" target="_blank" class="stream-btn">
+          <span class="stream-icon si-apple">♫</span>Apple Music
+        </a>
+        <a href="https://music.youtube.com/" target="_blank" class="stream-btn">
+          <span class="stream-icon si-youtube">▶</span>YouTube Music
+        </a>
+        <a href="https://distrokid.com/hyperfollow/emurph/" target="_blank" class="stream-btn">
+          <span class="stream-icon si-distrokid">D</span>All Platforms
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCH -->
+  <section id="merch">
+    <div class="merch-inner">
+      <div class="section-label">Official Merch</div>
+      <h2 class="section-title">Wear the Movement</h2>
+      <p style="color: var(--muted); font-size: 0.95rem; max-width: 500px;">Limited Juneteenth collection. Album art on premium materials. 100% of your markup goes directly to the artist.</p>
+      <div class="merch-grid">
+        <a href="https://direct.distrokid.com/emurph/product/1281778-juneteenth-crabs-chains-and-orange-kings-unisex-t-shirt" target="_blank" class="merch-card">
+          <div class="merch-img">👕</div>
+          <div class="merch-info">
+            <div class="merch-name">Unisex T-Shirt</div>
+            <div class="merch-price">$25</div>
+          </div>
+        </a>
+        <a href="https://direct.distrokid.com/emurph/product/1281780-juneteenth-crabs-chains-and-orange-kings-women-s-cut-t-shirt" target="_blank" class="merch-card">
+          <div class="merch-img">👗</div>
+          <div class="merch-info">
+            <div class="merch-name">Women's T-Shirt</div>
+            <div class="merch-price">$27</div>
+          </div>
+        </a>
+        <a href="https://direct.distrokid.com/emurph/product/1281781-juneteenth-crabs-chains-and-orange-kings-tote-bag" target="_blank" class="merch-card">
+          <div class="merch-img">👜</div>
+          <div class="merch-info">
+            <div class="merch-name">Tote Bag</div>
+            <div class="merch-price">$26</div>
+          </div>
+        </a>
+        <a href="https://direct.distrokid.com/emurph/product/1281779-juneteenth-crabs-chains-and-orange-kings-ceramic-mug" target="_blank" class="merch-card">
+          <div class="merch-img">☕</div>
+          <div class="merch-info">
+            <div class="merch-name">Ceramic Mug</div>
+            <div class="merch-price">$13</div>
+          </div>
+        </a>
+      </div>
+      <a href="https://direct.distrokid.com/emurph/" target="_blank" class="btn-primary merch-cta">View Full Store</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-portrait">EM</div>
+      <div class="about-text">
+        <div class="section-label">The Artist</div>
+        <h2 class="section-title">About<br/>EMurph</h2>
+        <p><strong>Eddie L. Murphy Jr.</strong> — known as EMurph — is a gospel hip-hop artist, educator, and minister of music from <strong>Macon, GA</strong>. His music sits at the intersection of faith, truth, and cultural witness.</p>
+        <p>With roots in the church and bars forged in real life, EMurph's sound is unafraid. He doesn't dress up hard truths — he brings them to the altar. Every track is a testimony.</p>
+        <p><em>Juneteenth: Crabs, Chains &amp; Orange Kings</em> is his boldest statement yet — 12 songs documenting freedom's cost, the traps we set for ourselves, and the sovereign kings God calls us to be.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">12</div>
+            <div class="stat-label">Tracks</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">June 19</div>
+            <div class="stat-label">Release Date</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2026</div>
+            <div class="stat-label">The Year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">EMurph</div>
+    <ul class="footer-links">
+      <li><a href="#album">Album</a></li>
+      <li><a href="#streaming">Stream</a></li>
+      <li><a href="https://direct.distrokid.com/emurph/" target="_blank">Merch</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 EMurph · All Rights Reserved · Macon, GA</div>
+  </footer>
+
+</body>
+</html>
