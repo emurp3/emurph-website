@@ -269,6 +269,16 @@
       z-index: 1;
     }
 
+    .album-cover-image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      box-shadow: 0 30px 80px rgba(224, 92, 26, 0.18);
+      display: block;
+    }
+
     .album-meta h2 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2rem, 5vw, 3.5rem);
@@ -568,10 +578,7 @@
   <!-- ALBUM -->
   <section id="album">
     <div class="album-grid">
-      <div class="album-art-placeholder">
-        <div class="album-art-title">Juneteenth<br/>Crabs, Chains<br/>&amp; Orange Kings</div>
-        <div class="album-art-sub">EMurph · 2026</div>
-      </div>
+      <img class="album-cover-image" src="assets/EMurph_Juneteenth_AlbumCover_DistroKid.jpg" alt="EMurph Juneteenth: Crabs, Chains, and Orange Kings album cover" />
       <div class="album-meta">
         <div class="section-label">New Album</div>
         <h2>Juneteenth:<br/>Crabs, Chains<br/>&amp; Orange Kings</h2>
