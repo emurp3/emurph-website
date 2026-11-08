@@ -111,6 +111,14 @@ section{padding-block:clamp(72px,11vw,128px)}
 .vol .date{font-family:var(--display);font-size:1.05rem;color:var(--gold-hi);letter-spacing:.06em}
 .vol p{margin:0;font-size:.92rem;color:var(--fur-dim)}
 
+/* FILM */
+.film{background:radial-gradient(110% 90% at 15% 0%,rgba(125,16,24,.45),transparent 60%),var(--night);border-bottom:1px solid var(--line)}
+.film-grid{display:grid;gap:22px;max-width:760px}
+.film h2{font-size:clamp(2.4rem,6vw,4rem);font-weight:700}
+.film h2 .script{display:block;font-family:var(--script);font-weight:400;color:var(--gold-hi);font-size:1.1em;line-height:1}
+.film .tagline{font-family:var(--display);font-size:clamp(1.1rem,2.6vw,1.5rem);color:var(--gold-hi);letter-spacing:.04em}
+.film p{margin:0;color:var(--fur);max-width:60ch}
+
 /* STREAM */
 .platforms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .plat{display:grid;gap:6px;padding:26px 22px;text-decoration:none;border:1px solid var(--line);background:var(--ember);transition:border-color .2s,transform .2s}
@@ -165,6 +173,7 @@ footer .brand{font-size:1.6rem}
       <li><a href="#album">Album</a></li>
       <li><a href="#tracks">Tracks</a></li>
       <li><a href="#series">Series</a></li>
+      <li><a href="#film">Film</a></li>
       <li><a href="#streaming">Stream</a></li>
       <li><a href="#merch">Merch</a></li>
       <li><a href="#about">About</a></li>
@@ -266,6 +275,22 @@ footer .brand{font-size:1.6rem}
         <div class="date">December 11, 2026</div>
         <p>The closer, landing in the run-up to Christmas.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="film" id="film">
+  <div class="wrap">
+    <div class="film-grid">
+      <div class="eyebrow">The film · One showing only</div>
+      <h2><span class="script">Gabe's</span>Return</h2>
+      <div class="tagline">Two empty chairs. One Christmas miracle.</div>
+      <p>EMurph's Christmas drama premieres Sunday, December 13, 2026 at Galleria Mall Cinemas in Centerville, GA.</p>
+      <dl class="facts">
+        <div><dt>Premiere</dt><dd>Dec 13, 2026</dd></div>
+        <div><dt>Time</dt><dd>3:00 PM</dd></div>
+        <div><dt>Runtime</dt><dd>1h 20m</dd></div>
+      </dl>
     </div>
   </div>
 </section>
