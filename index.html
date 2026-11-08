@@ -117,6 +117,9 @@ section{padding-block:clamp(72px,11vw,128px)}
 .film-info{display:grid;gap:22px;min-width:0}
 .film-poster{margin:0;position:relative;max-width:420px}
 .film-poster img{display:block;width:100%;height:auto;aspect-ratio:2/3;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px var(--line)}
+.film-teaser{margin-top:clamp(36px,6vw,64px);max-width:960px}
+.film-teaser h3{font-size:1.1rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:700}
+.film-teaser video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px var(--line)}
 @media (max-width:760px){.film-grid{grid-template-columns:1fr}.film-poster{max-width:340px}}
 .film h2{font-size:clamp(2.4rem,6vw,4rem);font-weight:700}
 .film h2 .script{display:block;font-family:var(--script);font-weight:400;color:var(--gold-hi);font-size:1.1em;line-height:1}
@@ -298,6 +301,12 @@ footer .brand{font-size:1.6rem}
         <div><dt>Runtime</dt><dd>1h 20m</dd></div>
       </dl>
       </div>
+    </div>
+    <div class="film-teaser">
+      <h3>Watch the teaser</h3>
+      <video controls playsinline preload="metadata" poster="assets/gabes-return-teaser-poster.jpg">
+        <source src="assets/gabes-return-teaser.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
