@@ -113,7 +113,11 @@ section{padding-block:clamp(72px,11vw,128px)}
 
 /* FILM */
 .film{background:radial-gradient(110% 90% at 15% 0%,rgba(125,16,24,.45),transparent 60%),var(--night);border-bottom:1px solid var(--line)}
-.film-grid{display:grid;gap:22px;max-width:760px}
+.film-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,6vw,72px);align-items:center}
+.film-info{display:grid;gap:22px;min-width:0}
+.film-poster{margin:0;position:relative;max-width:420px}
+.film-poster img{display:block;width:100%;height:auto;aspect-ratio:2/3;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px var(--line)}
+@media (max-width:760px){.film-grid{grid-template-columns:1fr}.film-poster{max-width:340px}}
 .film h2{font-size:clamp(2.4rem,6vw,4rem);font-weight:700}
 .film h2 .script{display:block;font-family:var(--script);font-weight:400;color:var(--gold-hi);font-size:1.1em;line-height:1}
 .film .tagline{font-family:var(--display);font-size:clamp(1.1rem,2.6vw,1.5rem);color:var(--gold-hi);letter-spacing:.04em}
@@ -282,6 +286,8 @@ footer .brand{font-size:1.6rem}
 <section class="film" id="film">
   <div class="wrap">
     <div class="film-grid">
+      <figure class="film-poster"><img src="assets/gabes-return-poster.jpg" alt="Gabe's Return movie poster: Two empty chairs. One Christmas miracle. December 13, 2026, Galleria Mall Cinemas, 3:00 PM, one showing." width="1000" height="1500" loading="lazy"></figure>
+      <div class="film-info">
       <div class="eyebrow">The film · One showing only</div>
       <h2><span class="script">Gabe's</span>Return</h2>
       <div class="tagline">Two empty chairs. One Christmas miracle.</div>
@@ -291,6 +297,7 @@ footer .brand{font-size:1.6rem}
         <div><dt>Time</dt><dd>3:00 PM</dd></div>
         <div><dt>Runtime</dt><dd>1h 20m</dd></div>
       </dl>
+      </div>
     </div>
   </div>
 </section>
