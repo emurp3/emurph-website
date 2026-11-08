@@ -1,0 +1,362 @@
+<title>EMurph's Christmas 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="EMurph's Christmas 2026, Vol. 1 — urban contemporary gospel for the season. Out November 13, 2026 on all platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Pinyon+Script&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: fireside night — full-bleed looped video hero with copy on the warm left blur,
+   then velvet-red and evergreen-black bands down the page, gold foil as the one accent. */
+:root{
+  --night:#0d0907;        /* wood-panel black, warm bias */
+  --ember:#1a110c;        /* raised surface */
+  --velvet:#7d1018;       /* santa-suit red */
+  --velvet-deep:#4a080e;
+  --gold:#e3b75a;         /* foil gold */
+  --gold-hi:#f8dc96;
+  --fur:#f4ecdf;          /* cream fur, body text */
+  --fur-dim:#c9bba8;
+  --line:rgba(227,183,90,.22);
+  --display:"Cinzel","Trajan Pro",Georgia,serif;
+  --script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
+  --body:"Manrope","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--fur);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
+.eyebrow{font-family:var(--body);font-weight:700;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.foil{background:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 45%,#a8792b 70%,var(--gold-hi) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:linear-gradient(180deg,rgba(13,9,7,.92),rgba(13,9,7,.6));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--script);font-size:2rem;line-height:1;text-decoration:none;color:var(--gold-hi)}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:clamp(14px,3vw,32px);flex-wrap:wrap}
+.nav ul a{text-decoration:none;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--fur-dim);transition:color .2s}
+.nav ul a:hover{color:var(--gold-hi)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;min-height:min(86vh,820px);display:flex;align-items:center;isolation:isolate;background:var(--velvet-deep)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center;z-index:-3}
+.hero::after{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(13,9,7,.78) 0%,rgba(13,9,7,.45) 38%,rgba(13,9,7,0) 60%),linear-gradient(0deg,var(--night) 0%,rgba(13,9,7,0) 22%)}
+#snow{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero .wrap{width:100%;padding-block:clamp(56px,10vh,110px)}
+.hero-copy{max-width:520px;display:grid;gap:18px}
+.hero h1{display:grid;gap:4px}
+.hero h1 .script{font-family:var(--script);font-weight:400;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1;color:var(--gold-hi);letter-spacing:0}
+.hero h1 .big{font-weight:900;font-size:clamp(3rem,8.4vw,6.4rem);letter-spacing:.02em}
+.hero h1 .yr{font-weight:700;font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:.18em;color:#e8e6e3}
+.ribbon{justify-self:start;font-family:var(--display);font-weight:700;letter-spacing:.2em;font-size:.95rem;color:var(--gold-hi);background:linear-gradient(180deg,#9b1520,var(--velvet));border:1px solid var(--gold);padding:6px 22px;clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+.hero p.lede{margin:0;color:var(--fur);max-width:44ch;font-size:1.05rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:15px 26px;border-radius:2px;transition:transform .2s,background .2s,color .2s}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#2a1606}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold-hi)}
+.btn-ghost:hover{background:rgba(227,183,90,.12)}
+
+/* COUNTDOWN */
+.countdown{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.cd{min-width:70px;padding:10px 12px;text-align:center;border:1px solid var(--line);background:rgba(13,9,7,.55)}
+.cd b{display:block;font-family:var(--display);font-size:1.7rem;font-weight:700;color:var(--gold-hi);font-variant-numeric:tabular-nums;line-height:1.1}
+.cd span{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fur-dim)}
+.cd-live{font-family:var(--display);font-size:1.2rem;color:var(--gold-hi);letter-spacing:.1em}
+
+/* SECTIONS */
+section{padding-block:clamp(72px,11vw,128px)}
+.sec-head{display:grid;gap:12px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:700}
+.sec-head p{margin:0;color:var(--fur-dim);max-width:58ch}
+
+/* ALBUM */
+.album{background:radial-gradient(120% 90% at 85% 10%,rgba(125,16,24,.55),transparent 60%),var(--night)}
+.album-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,80px);align-items:center}
+.cover{position:relative;max-width:100%}
+.cover img{display:block;width:100%;height:auto;aspect-ratio:1/1;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px var(--line)}
+.cover::after{content:"";position:absolute;inset:-14px;border:1px solid var(--line);pointer-events:none}
+.album-info{display:grid;gap:22px;min-width:0}
+.album-info h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:700}
+.album-info h2 .script{display:block;font-family:var(--script);font-weight:400;color:var(--gold-hi);font-size:.9em;line-height:1}
+.album-info p{margin:0;color:var(--fur);max-width:56ch}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{padding:16px 12px;display:grid;gap:2px}
+.facts div + div{border-left:1px solid var(--line)}
+.facts dt{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fur-dim)}
+.facts dd{margin:0;font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--gold-hi)}
+
+
+/* TRACKLIST */
+.tracks{background:var(--night);border-top:1px solid var(--line)}
+.tracklist{list-style:none;margin:0;padding:0;columns:2;column-gap:56px}
+.tracklist li{display:flex;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.tracklist .no{font-family:var(--display);font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;min-width:2ch}
+.tracklist .tt{font-weight:500;color:var(--fur);min-width:0}
+@media (max-width:760px){.tracklist{columns:1}}
+
+/* SERIES */
+.series{background:linear-gradient(180deg,var(--velvet-deep),var(--velvet) 55%,var(--velvet-deep));border-block:1px solid var(--gold)}
+.series .sec-head p{color:var(--fur)}
+.vols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vol{position:relative;padding:28px 24px;border:1px solid rgba(248,220,150,.35);background:rgba(13,9,7,.28);display:grid;gap:8px}
+.vol.now{background:rgba(13,9,7,.55);border-color:var(--gold-hi)}
+.vol .tag{justify-self:start;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid currentColor;color:var(--fur-dim)}
+.vol.now .tag{color:#2a1606;background:var(--gold-hi);border-color:var(--gold-hi)}
+.vol h3{font-size:1.7rem;font-weight:700;color:var(--fur)}
+.vol .date{font-family:var(--display);font-size:1.05rem;color:var(--gold-hi);letter-spacing:.06em}
+.vol p{margin:0;font-size:.92rem;color:var(--fur-dim)}
+
+/* STREAM */
+.platforms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.plat{display:grid;gap:6px;padding:26px 22px;text-decoration:none;border:1px solid var(--line);background:var(--ember);transition:border-color .2s,transform .2s}
+.plat:hover{border-color:var(--gold);transform:translateY(-3px)}
+.plat strong{font-family:var(--display);font-size:1.25rem;font-weight:700;color:var(--fur)}
+.plat span{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+
+/* MERCH */
+.merch{background:var(--ember);border-top:1px solid var(--line)}
+.merch-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.item{display:grid;gap:4px;padding:22px;border:1px solid var(--line);text-decoration:none;background:var(--night);transition:border-color .2s}
+.item:hover{border-color:var(--gold)}
+.item strong{font-weight:600;color:var(--fur)}
+.item span{font-family:var(--display);color:var(--gold-hi);font-size:1.1rem}
+.merch .more{margin-top:28px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:start}
+.about h2 .script{display:block;font-family:var(--script);font-weight:400;color:var(--gold-hi);font-size:.75em}
+.about-text{display:grid;gap:16px;min-width:0}
+.about-text p{margin:0;max-width:62ch}
+
+footer{border-top:1px solid var(--line);padding-block:36px;color:var(--fur-dim);font-size:.82rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer .brand{font-size:1.6rem}
+
+@media (max-width:860px){
+  .album-grid,.about-grid{grid-template-columns:1fr}
+  .cover{max-width:440px}
+  .vols{grid-template-columns:1fr}
+  .platforms,.merch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .nav ul{display:none}
+  .hero{min-height:auto;align-items:flex-end}
+  .hero video{object-position:78% center}
+  .hero::after{background:linear-gradient(0deg,rgba(13,9,7,.95) 0%,rgba(13,9,7,.7) 45%,rgba(13,9,7,.1) 75%)}
+  .hero .wrap{padding-top:52vh}
+  .facts{grid-template-columns:1fr}
+  .facts div + div{border-left:0;border-top:1px solid var(--line)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.plat{transition:none}
+}
+</style>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#hero">EMurph</a>
+    <ul>
+      <li><a href="#album">Album</a></li>
+      <li><a href="#tracks">Tracks</a></li>
+      <li><a href="#series">Series</a></li>
+      <li><a href="#streaming">Stream</a></li>
+      <li><a href="#merch">Merch</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <video autoplay muted loop playsinline preload="auto" poster="assets/emurph-christmas-hero-poster.jpg" aria-hidden="true">
+    <source src="assets/emurph-christmas-hero.mp4" type="video/mp4">
+  </video>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">New album · November 13, 2026</div>
+      <h1>
+        <span class="script">EMurph's</span>
+        <span class="big foil">Christmas</span>
+        <span class="yr">2026</span>
+      </h1>
+      <div class="ribbon">VOL. 1</div>
+      <p class="lede">Urban contemporary gospel for the season. Trap, soul and worship by the fireside, built for church, the car and the Christmas party.</p>
+      <div class="countdown" id="countdown" aria-live="polite"></div>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://distrokid.com/hyperfollow/emurph/emurphs-christmas-2026-vol-1" target="_blank" rel="noopener">Pre-save Vol. 1</a>
+        <a class="btn btn-ghost" href="#tracks">See the tracklist</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="album" id="album">
+  <div class="wrap album-grid">
+    <figure class="cover" style="margin:0">
+      <img src="assets/emurph-christmas-2026-cover.jpg" alt="EMurph's Christmas 2026 Vol. 1 album cover: EMurph in a red velvet Santa suit beside a fireplace, Christmas tree and record player" width="1200" height="1200">
+    </figure>
+    <div class="album-info">
+      <div class="eyebrow">The new album</div>
+      <h2><span class="script">EMurph's</span>Christmas 2026, Vol. 1</h2>
+      <p>The first of three Christmas releases this season. Twelve tracks of fireside soul, dance-floor bass and worship, all through EMurph's trap gospel sound.</p>
+      <p>Distributed worldwide on all major streaming platforms via DistroKid.</p>
+      <dl class="facts">
+        <div><dt>Release</dt><dd>Nov 13, 2026</dd></div>
+        <div><dt>Series</dt><dd>Vol. 1 of 3</dd></div>
+        <div><dt>Tracks</dt><dd>12</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+
+<section class="tracks" id="tracks">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Vol. 1 · 12 tracks</div>
+      <h2>Tracklist</h2>
+    </div>
+    <ol class="tracklist">
+        <li><span class="no">01</span><span class="tt">Can't Shake That Christmas</span></li>
+        <li><span class="no">02</span><span class="tt">Favorite Things (Urban Dance Edition)</span></li>
+        <li><span class="no">03</span><span class="tt">Santa Brought the Bass (Funk Mix)</span></li>
+        <li><span class="no">04</span><span class="tt">Santa Brought the Bass (Hip-Hop Mix)</span></li>
+        <li><span class="no">05</span><span class="tt">Put That Joy on Repeat</span></li>
+        <li><span class="no">06</span><span class="tt">Rock the Cradle</span></li>
+        <li><span class="no">07</span><span class="tt">Christmas Like When I Was</span></li>
+        <li><span class="no">08</span><span class="tt">Don't They See</span></li>
+        <li><span class="no">09</span><span class="tt">Christmas on the Roof</span></li>
+        <li><span class="no">10</span><span class="tt">Christmas Took the Elevator</span></li>
+        <li><span class="no">11</span><span class="tt">Heaven Came Down Our Street</span></li>
+        <li><span class="no">12</span><span class="tt">Can't Shake That Christmas (Cyber Remix)</span></li>
+    </ol>
+    <div class="more" style="margin-top:32px"><a class="btn btn-gold" href="https://distrokid.com/hyperfollow/emurph/emurphs-christmas-2026-vol-1" target="_blank" rel="noopener">Pre-save Vol. 1</a></div>
+  </div>
+</section>
+
+<section class="series" id="series">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--gold-hi)">Three volumes · every other week</div>
+      <h2>A Christmas Season of New Music</h2>
+      <p>One new volume every two weeks, from mid-November straight through to Christmas.</p>
+    </div>
+    <div class="vols">
+      <article class="vol now">
+        <span class="tag">Out Nov 13</span>
+        <h3>Vol. 1</h3>
+        <div class="date">November 13, 2026</div>
+        <p>The opener. Fireside soul, party-ready bass and the season's first word.</p>
+      </article>
+      <article class="vol">
+        <span class="tag">Thanksgiving</span>
+        <h3>Vol. 2</h3>
+        <div class="date">November 27, 2026</div>
+        <p>Arrives Thanksgiving weekend, just in time for the family gathering.</p>
+      </article>
+      <article class="vol">
+        <span class="tag">Coming soon</span>
+        <h3>Vol. 3</h3>
+        <div class="date">December 2026</div>
+        <p>The closer, landing in the run-up to Christmas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="streaming">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Available on</div>
+      <h2>Stream the Album</h2>
+      <p>Pre-save Vol. 1 on every platform, or follow EMurph where you listen so it shows up the day it drops.</p>
+    </div>
+    <div class="platforms">
+      <a class="plat" href="https://open.spotify.com/artist/3TLziNdQHU5uWEkgaC7pTj" target="_blank" rel="noopener"><span>Follow</span><strong>Spotify</strong></a>
+      <a class="plat" href="https://music.apple.com/us/artist/emurph/1492576022" target="_blank" rel="noopener"><span>Follow</span><strong>Apple Music</strong></a>
+      <a class="plat" href="https://www.youtube.com/@EMurph" target="_blank" rel="noopener"><span>Subscribe</span><strong>YouTube Music</strong></a>
+      <a class="plat" href="https://distrokid.com/hyperfollow/emurph/emurphs-christmas-2026-vol-1" target="_blank" rel="noopener"><span>Pre-save</span><strong>All Platforms</strong></a>
+    </div>
+  </div>
+</section>
+
+<section class="merch" id="merch">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Official merch</div>
+      <h2>Wear the Movement</h2>
+      <p>The Juneteenth: Crabs, Chains &amp; Orange Kings collection is still in the store. Album art on premium materials, with every markup dollar going straight to the artist.</p>
+    </div>
+    <div class="merch-grid">
+      <a class="item" href="https://direct.distrokid.com/emurph/product/1281778-juneteenth-crabs-chains-and-orange-kings-unisex-t-shirt" target="_blank" rel="noopener"><strong>Unisex T-Shirt</strong><span>$25</span></a>
+      <a class="item" href="https://direct.distrokid.com/emurph/product/1281780-juneteenth-crabs-chains-and-orange-kings-women-s-cut-t-shirt" target="_blank" rel="noopener"><strong>Women's T-Shirt</strong><span>$27</span></a>
+      <a class="item" href="https://direct.distrokid.com/emurph/product/1281781-juneteenth-crabs-chains-and-orange-kings-tote-bag" target="_blank" rel="noopener"><strong>Tote Bag</strong><span>$26</span></a>
+      <a class="item" href="https://direct.distrokid.com/emurph/product/1281779-juneteenth-crabs-chains-and-orange-kings-ceramic-mug" target="_blank" rel="noopener"><strong>Ceramic Mug</strong><span>$13</span></a>
+    </div>
+    <div class="more"><a class="btn btn-ghost" href="https://direct.distrokid.com/emurph/" target="_blank" rel="noopener">View full store</a></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">The artist</div>
+      <h2><span class="script">About</span>EMurph</h2>
+    </div>
+    <div class="about-text">
+      <p>Eddie L. Murphy Jr., known as EMurph, is a gospel hip-hop artist, educator and minister of music from Macon, GA. His music sits at the intersection of faith, truth and cultural witness.</p>
+      <p>With roots in the church and bars forged in real life, EMurph's sound is unafraid. He doesn't dress up hard truths; he brings them to the altar. Every track is a testimony.</p>
+      <p>This Christmas he brings that same conviction to the season with a three-volume series that runs from fireside worship to the party floor, keeping Christ at the center of Christmas.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#hero">EMurph</a>
+    <span>© 2026 EMurph · All Rights Reserved · Macon, GA</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Countdown to release: Nov 13, 2026, 12:00 AM Eastern
+  var target = new Date('2026-11-13T00:00:00-05:00').getTime();
+  var el = document.getElementById('countdown');
+  function pad(n){return String(n).padStart(2,'0');}
+  function tick(){
+    var d = target - Date.now();
+    if (d <= 0){ el.innerHTML = '<div class="cd-live">Out now on all platforms</div>'; return; }
+    var days=Math.floor(d/864e5), h=Math.floor(d/36e5)%24, m=Math.floor(d/6e4)%60, s=Math.floor(d/1e3)%60;
+    el.innerHTML = [[days,'Days'],[h,'Hours'],[m,'Min'],[s,'Sec']].map(function(x){
+      return '<div class="cd"><b>'+pad(x[0])+'</b><span>'+x[1]+'</span></div>';}).join('');
+    setTimeout(tick,1000);
+  }
+  tick();
+
+  // Snowfall over the hero video
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var c = document.getElementById('snow'); if(!c || reduce) return;
+  var ctx = c.getContext('2d'), flakes=[], W=0, H=0, dpr=Math.min(window.devicePixelRatio||1,2);
+  function size(){ var r=c.getBoundingClientRect(); W=r.width; H=r.height; c.width=W*dpr; c.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+  function make(init){ return {x:Math.random()*W, y:init?Math.random()*H:-10, r:Math.random()*2.2+.6, v:Math.random()*.6+.35, w:Math.random()*Math.PI*2, o:Math.random()*.5+.35}; }
+  size(); for(var i=0;i<Math.round(W/9);i++) flakes.push(make(true));
+  window.addEventListener('resize', size);
+  (function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<flakes.length;i++){
+      var f=flakes[i]; f.y+=f.v; f.w+=.012; f.x+=Math.sin(f.w)*.35;
+      if(f.y>H+10){ flakes[i]=make(false); continue; }
+      ctx.beginPath(); ctx.arc(f.x,f.y,f.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,250,240,'+f.o+')'; ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  })();
+})();
+</script>
