@@ -103,13 +103,15 @@ section{padding-block:clamp(72px,11vw,128px)}
 .series{background:linear-gradient(180deg,var(--velvet-deep),var(--velvet) 55%,var(--velvet-deep));border-block:1px solid var(--gold)}
 .series .sec-head p{color:var(--fur)}
 .vols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.vol{position:relative;padding:28px 24px;border:1px solid rgba(248,220,150,.35);background:rgba(13,9,7,.28);display:grid;gap:8px}
+.vol{position:relative;padding:28px 24px;border:1px solid rgba(248,220,150,.35);background:rgba(13,9,7,.28);display:grid;gap:8px;align-content:start}
 .vol.now{background:rgba(13,9,7,.55);border-color:var(--gold-hi)}
 .vol .tag{justify-self:start;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border:1px solid currentColor;color:var(--fur-dim)}
 .vol.now .tag{color:#2a1606;background:var(--gold-hi);border-color:var(--gold-hi)}
 .vol h3{font-size:1.7rem;font-weight:700;color:var(--fur)}
 .vol .date{font-family:var(--display);font-size:1.05rem;color:var(--gold-hi);letter-spacing:.06em}
 .vol p{margin:0;font-size:.92rem;color:var(--fur-dim)}
+.vol img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;margin-bottom:10px;box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 0 1px var(--line)}
+.vol .sub{font-family:var(--script);font-size:1.5rem;line-height:1.1;color:var(--gold-hi);margin-top:-4px}
 
 /* FILM */
 .film{background:radial-gradient(110% 90% at 15% 0%,rgba(125,16,24,.45),transparent 60%),var(--night);border-bottom:1px solid var(--line)}
@@ -265,14 +267,17 @@ footer .brand{font-size:1.6rem}
     </div>
     <div class="vols">
       <article class="vol now">
+        <img src="assets/emurph-christmas-2026-cover.jpg" alt="EMurph's Christmas 2026, Vol. 1 cover art" width="600" height="600" loading="lazy">
         <span class="tag">Out Nov 13</span>
         <h3>Vol. 1</h3>
         <div class="date">November 13, 2026</div>
         <p>The opener. Fireside soul, party-ready bass and the season's first word.</p>
       </article>
       <article class="vol">
+        <img src="assets/emurph-christmas-vol2-cover.jpg" alt="EMurph's Christmas 2026, Vol. 2: The Praise Team Vibe cover art" width="900" height="900" loading="lazy">
         <span class="tag">Thanksgiving</span>
         <h3>Vol. 2</h3>
+        <div class="sub">The Praise Team Vibe</div>
         <div class="date">November 26, 2026</div>
         <p>Arrives on Thanksgiving Day, just in time for the family gathering.</p>
       </article>
