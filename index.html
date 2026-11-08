@@ -42,8 +42,8 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
 .nav ul a:hover{color:var(--gold-hi)}
 
 /* HERO */
-.hero{position:relative;overflow:hidden;min-height:min(86vh,820px);display:flex;align-items:center;isolation:isolate;background:var(--velvet-deep)}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center;z-index:-3}
+.hero{position:relative;overflow:hidden;min-height:min(86vh,820px);display:flex;align-items:center;isolation:isolate;background:var(--night)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center;z-index:-3;transform:scale(.9);transform-origin:right bottom}
 .hero::after{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(13,9,7,.78) 0%,rgba(13,9,7,.45) 38%,rgba(13,9,7,0) 60%),linear-gradient(0deg,var(--night) 0%,rgba(13,9,7,0) 22%)}
 #snow{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
 .hero .wrap{width:100%;padding-block:clamp(56px,10vh,110px)}
